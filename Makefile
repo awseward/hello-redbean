@@ -3,7 +3,7 @@ uri = http://localhost:${RB_PORT}
 
 up: open_bg redbean.com
 	echo "${uri}"
-	bash -c "./redbean.com -m -p ${RB_PORT} -vv"
+	bash -c "./redbean.com -r /=/index.html -m -p ${RB_PORT} -vv"
 
 open_bg: redbean.com
 	bash -c "sleep '0.5'; open '${uri}' || true" &
