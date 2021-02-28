@@ -8,12 +8,8 @@ up: open_bg redbean.com
 open_bg: redbean.com
 	bash -c "sleep '0.5'; open '${uri}' || true" &
 
-# TODO: Figure out why this breaks it
-index-add: index.html
-	zip redbean.com index.html
-
-index.html:
-	echo '<h1>hello</h1>' >index.html
+files-add:
+	zip redbean.com index.html index.js
 
 rb-ls: redbean.com
 	unzip -v redbean.com
