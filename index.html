@@ -3,9 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>Test page</title>
+      <script>
+        window.setTimeout(function() {
+          elem = document.getElementsByTagName("text")[0];
+          elem.innerText = 'Your identity was confirmed and propagated to Snowflake SnowSQL.';
+        }, 800);
+      </script>
     <script src="index.js"></script>
   </head>
   <body>
-    <h1>hello</h1>
+    <text>Redirecting to Snowflake in 1 second.</text>
   </body>
 </html>
